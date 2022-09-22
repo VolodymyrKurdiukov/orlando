@@ -33,4 +33,7 @@ $(document).ready(function () {
 	$('.header-bottom__link-arrow').click(function (event) {
 		$(this).toggleClass('active').next().toggleClass('active');
 	});
+	$('.faq__label').click(function (event) {
+		$(this).toggleClass('active').next().slideToggle(300);
+	});
 });
