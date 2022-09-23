@@ -20,7 +20,7 @@ let Slider = new Swiper('.testimonials__wrapper', {
 	observeSlideChildren: true,
 	speed: 1000,
 	centeredSlides: true,
-	spaceBetween: 120,
+	spaceBetween: 300,
 	loop: true,
 	navigation: {
 		nextEl: ".testimonials__next",
@@ -30,9 +30,6 @@ let Slider = new Swiper('.testimonials__wrapper', {
 
 
 $(document).ready(function () {
-	$('.header-bottom__link-arrow').click(function (event) {
-		$(this).toggleClass('active').next().toggleClass('active');
-	});
 	$('.faq__label').click(function (event) {
 		$(this).toggleClass('active').next().slideToggle(300);
 	});
