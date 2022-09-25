@@ -41,4 +41,9 @@ $(document).ready(function () {
 		$(".faq-general__wrapper .faq-general__tab").removeClass("active").eq($(this).index()).addClass("active");
 		$(".faq-general__tab-item").hide().eq($(this).index()).fadeIn();
 	}).eq(0).addClass("active");
+	$(".blog-detail__tab-item").not(":first").hide();
+	$(".blog-detail__wrapper .blog-detail__tab").click(function () {
+		$(".blog-detail__wrapper .blog-detail__tab").removeClass("active").eq($(this).index()).addClass("active");
+		$(".blog-detail__tab-item").hide().eq($(this).index()).fadeIn();
+	}).eq(0).addClass("active");
 });
