@@ -46,4 +46,9 @@ $(document).ready(function () {
 		$(".blog-detail__wrapper .blog-detail__tab").removeClass("active").eq($(this).index()).addClass("active");
 		$(".blog-detail__tab-item").hide().eq($(this).index()).fadeIn();
 	}).eq(0).addClass("active");
+	$(".blog__tab-item").not(":first").hide();
+	$(".blog__body .blog__tab").click(function () {
+		$(".blog__body .blog__tab").removeClass("active").eq($(this).index()).addClass("active");
+		$(".blog__tab-item").hide().eq($(this).index()).fadeIn();
+	}).eq(0).addClass("active");
 });
