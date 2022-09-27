@@ -188,28 +188,42 @@ $(document).ready(function () {
 		$('.menu__icon,.menu__body').toggleClass('active');
 		$('body').toggleClass('lock');
 	});
+
+
 	$('.faq__label').click(function (event) {
 		$(this).toggleClass('active').next().slideToggle(300);
 	});
+
+
 	$('.item-faq-general__label').click(function (event) {
 		$(this).toggleClass('active').next().slideToggle(300);
 	});
+
+
 	$(".faq-general__tab-item").not(":first").hide();
 	$(".faq-general__wrapper .faq-general__tab").click(function () {
 		$(".faq-general__wrapper .faq-general__tab").removeClass("active").eq($(this).index()).addClass("active");
 		$(".faq-general__tab-item").hide().eq($(this).index()).fadeIn();
 	}).eq(0).addClass("active");
-	$(".blog-detail__tab-item").not(":first").hide();
-	$(".blog-detail__wrapper .blog-detail__tab").click(function () {
-		$(".blog-detail__wrapper .blog-detail__tab").removeClass("active").eq($(this).index()).addClass("active");
-		$(".blog-detail__tab-item").hide().eq($(this).index()).fadeIn();
-	}).eq(0).addClass("active");
-	$(".blog__tab-item").not(":first").hide();
-	$(".blog__body .blog__tab").click(function () {
-		$(".blog__body .blog__tab").removeClass("active").eq($(this).index()).addClass("active");
-		$(".blog__tab-item").hide().eq($(this).index()).fadeIn();
-	}).eq(0).addClass("active");
+
+
+	// $(".blog-detail__tab-item").not(":first").hide();
+	// $(".blog-detail__wrapper .blog-detail__tab").click(function () {
+	// 	$(".blog-detail__wrapper .blog-detail__tab").removeClass("active").eq($(this).index()).addClass("active");
+	// 	$(".blog-detail__tab-item").hide().eq($(this).index()).fadeIn();
+	// }).eq(0).addClass("active");
+
+
+	// $(".blog__tab-item").not(":first").hide();
+	// $(".blog__body .blog__tab").click(function () {
+	// 	$(".blog__body .blog__tab").removeClass("active").eq($(this).index()).addClass("active");
+	// 	$(".blog__tab-item").hide().eq($(this).index()).fadeIn();
+	// }).eq(0).addClass("active");
+
+
 });
+
+
 jQuery(($) => {
 	if ($(window).width() < 991.98) {
 		$('.header-bottom__link-arrow').click(function (event) {
