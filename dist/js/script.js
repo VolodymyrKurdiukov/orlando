@@ -201,11 +201,28 @@ $(document).ready(function () {
 
 });
 
+$(document).on('scroll', function () {
+	$('#movingText').css("left", Math.max(500 - 0.35 * window.scrollY)
+		+ "px");
+})
+
 
 jQuery(($) => {
+	if ($(window).width() < 1199.98) {
+		$(document).on('scroll', function () {
+			$('#movingText').css("left", Math.max(300 - 0.35 * window.scrollY)
+				+ "px");
+		})
+	}
 	if ($(window).width() < 991.98) {
 		$('.header-bottom__link-arrow').click(function (event) {
 			$(this).toggleClass('active').next().slideToggle(300);
 		});
+	}
+	if ($(window).width() > 1920.98) {
+		$(document).on('scroll', function () {
+			$('#movingText').css("left", Math.max(500 - 0.35 * window.scrollY)
+				+ "px");
+		})
 	}
 });
