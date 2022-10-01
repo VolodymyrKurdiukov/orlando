@@ -223,7 +223,7 @@ jQuery(($) => {
 	}
 	if ($(window).width() < 767.98) {
 		$(document).on('scroll', function () {
-			$('#movingText').css("left", Math.max(100 - 0.35 * window.scrollY)
+			$('#movingText').css("left", Math.max(200 - 0.35 * window.scrollY)
 				+ "px");
 		})
 	}
