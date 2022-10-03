@@ -219,7 +219,10 @@ let textPath = document.querySelector('#text-path');
 
 let textContainer = document.querySelector('#text-container');
 
-let path = document.querySelector(textPath.getAttribute('href') );
+
+window.onload = function () {
+	let path = document.querySelector(textPath.getAttribute('href'));
+}
 
 let pathLength = path.getTotalLength();
 
@@ -232,7 +235,7 @@ function onScroll() {
 	requestAnimationFrame(function () {
 		let rect = textContainer.getBoundingClientRect();
 		let scrollPercent = rect.y / window.innerHeight;
-		updateTextPathOffset(scrollPercent  * pathLength );
+		updateTextPathOffset(scrollPercent * pathLength);
 	});
 }
 
