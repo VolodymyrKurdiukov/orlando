@@ -218,6 +218,8 @@ jQuery(($) => {
 
 
 
+
+
 try {
 	var textPath = document.querySelector('#text-path');
 
@@ -245,4 +247,3 @@ try {
 } catch {
 
 }
-
