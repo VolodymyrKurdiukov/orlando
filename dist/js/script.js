@@ -215,25 +215,28 @@ jQuery(($) => {
 	}
 });
 
-var textPath = document.querySelector('.text-path');
 
-var textContainer = document.querySelector('#text-container');
+window.onload = function () {
+	var textPath = document.querySelector('#text-path');
 
-var path = document.querySelector(textPath.getAttribute('href'));
+	var textContainer = document.querySelector('#text-container');
 
-var pathLength = path.getTotalLength();
+	var path = document.querySelector(textPath.getAttribute('href'));
 
-function updateTextPathOffset(offset) {
-	textPath.setAttribute('startOffset', offset);
+	var pathLength = path.getTotalLength();
+
+	function updateTextPathOffset(offset) {
+		textPath.setAttribute('startOffset', offset);
+	}
+	updateTextPathOffset(pathLength);
+
+	function onScroll() {
+		requestAnimationFrame(function () {
+			var rect = textContainer.getBoundingClientRect();
+			var scrollPercent = rect.y / window.innerHeight;
+			updateTextPathOffset(scrollPercent * pathLength);
+		});
+	}
+
+	window.addEventListener('scroll', onScroll);
 }
-updateTextPathOffset(pathLength);
-
-function onScroll() {
-	requestAnimationFrame(function () {
-		var rect = textContainer.getBoundingClientRect();
-		var scrollPercent = rect.y / window.innerHeight;
-		updateTextPathOffset(scrollPercent * pathLength);
-	});
-}
-
-window.addEventListener('scroll', onScroll);
