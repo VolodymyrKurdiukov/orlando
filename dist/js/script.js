@@ -216,16 +216,20 @@ jQuery(($) => {
 });
 
 
-var taxtPath = document.querySelector('#text-path');
+var textPath = document.querySelector('#text-path');
 
 var textContainer = document.querySelector('#text-container');
 
-var path = document.querySelector(taxtPath.getAttribute('href'));
+try {
+	var path = document.querySelector(textPath.getAttribute('href'));
+} catch{
+	
+}
 
 var pathLength = path.getTotalLength();
 
 function updateTextPathOffset(offset) {
-	taxtPath.setAttribute('startOffset', offset);
+	textPath.setAttribute('startOffset', offset);
 }
 updateTextPathOffset(pathLength);
 
