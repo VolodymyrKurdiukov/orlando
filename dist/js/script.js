@@ -219,10 +219,7 @@ let textPath = document.querySelector('#text-path');
 
 let textContainer = document.querySelector('#text-container');
 
-
-window.onload = function () {
-	let path = document.querySelector(textPath.getAttribute('href'));
-}
+let path = document.querySelector(textPath.getAttribute('href'));
 
 let pathLength = path.getTotalLength();
 
