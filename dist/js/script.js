@@ -215,7 +215,7 @@ jQuery(($) => {
 	}
 });
 
-let textPath = document.querySelector('#text-path');
+let textPath = document.querySelector('.text-path');
 
 let textContainer = document.querySelector('#text-container');
 
