@@ -222,11 +222,12 @@ var textContainer = document.querySelector('#text-container');
 
 try {
 	var path = document.querySelector(textPath.getAttribute('href'));
+	var pathLength = path.getTotalLength();
 } catch{
-	
+
 }
 
-var pathLength = path.getTotalLength();
+
 
 function updateTextPathOffset(offset) {
 	textPath.setAttribute('startOffset', offset);
