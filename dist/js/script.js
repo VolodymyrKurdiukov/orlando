@@ -215,13 +215,13 @@ jQuery(($) => {
 	}
 });
 
-let textPath = document.querySelector('.text-path');
+var textPath = document.querySelector('.text-path');
 
-let textContainer = document.querySelector('#text-container');
+var textContainer = document.querySelector('#text-container');
 
-let path = document.querySelector(textPath.getAttribute('href'));
+var path = document.querySelector(textPath.getAttribute('href'));
 
-let pathLength = path.getTotalLength();
+var pathLength = path.getTotalLength();
 
 function updateTextPathOffset(offset) {
 	textPath.setAttribute('startOffset', offset);
@@ -230,8 +230,8 @@ updateTextPathOffset(pathLength);
 
 function onScroll() {
 	requestAnimationFrame(function () {
-		let rect = textContainer.getBoundingClientRect();
-		let scrollPercent = rect.y / window.innerHeight;
+		var rect = textContainer.getBoundingClientRect();
+		var scrollPercent = rect.y / window.innerHeight;
 		updateTextPathOffset(scrollPercent * pathLength);
 	});
 }
